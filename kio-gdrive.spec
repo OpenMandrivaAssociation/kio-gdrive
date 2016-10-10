@@ -9,7 +9,7 @@ Source0: http://download.kde.org/stable/kio-gdrive/%{version}/src/%{name}-%{vers
 BuildRequires: cmake(ECM)
 BuildRequires: cmake(Qt5Core)
 BuildRequires: cmake(Qt5Keychain)
-BuildRequires: cmake(KF5KI18n)
+BuildRequires: cmake(KF5I18n)
 BuildRequires: cmake(KF5KIO)
 BuildRequires: cmake(KF5GAPI)
 
