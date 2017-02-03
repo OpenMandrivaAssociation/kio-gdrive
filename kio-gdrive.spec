@@ -8,6 +8,7 @@ Url: http://www.kde.org
 Source0: http://download.kde.org/stable/kio-gdrive/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires: cmake(ECM)
 BuildRequires: cmake(Qt5Core)
+BuildRequires: cmake(Qt5Test)
 BuildRequires: cmake(Qt5Keychain)
 BuildRequires: cmake(KF5I18n)
 BuildRequires: cmake(KF5KIO)
