@@ -33,3 +33,4 @@ Google Drive KIO-slave for KDE applications.
 %doc %{_docdir}/HTML/*/kioslave5/gdrive/index.*
 %{_libdir}/qt5/plugins/kf5/kio/gdrive.so
 %{_datadir}/remoteview/gdrive-network.desktop
+%{_datadir}/metainfo/org*.xml
