@@ -13,6 +13,7 @@ BuildRequires: cmake(Qt5Keychain)
 BuildRequires: cmake(KF5I18n)
 BuildRequires: cmake(KF5KIO)
 BuildRequires: cmake(KPimGAPI)
+BuildRequires: cmake(KAccounts)
 
 %description
 Google Drive KIO-slave for KDE applications.
