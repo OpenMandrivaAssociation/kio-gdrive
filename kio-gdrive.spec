@@ -14,6 +14,7 @@ BuildRequires: cmake(KF5I18n)
 BuildRequires: cmake(KF5KIO)
 BuildRequires: cmake(KPimGAPI)
 BuildRequires: cmake(KAccounts)
+BuildRequires:	cmake(KF5DocTools)
 BuildRequires: intltool
 
 %description
