@@ -16,6 +16,7 @@ BuildRequires: cmake(KPimGAPI)
 BuildRequires: cmake(KAccounts)
 BuildRequires: cmake(KF5DocTools)
 BuildRequires: cmake(KF5Notifications)
+BuildRequires: pkgconfig(libaccounts-glib)
 BuildRequires: intltool
 
 %description
