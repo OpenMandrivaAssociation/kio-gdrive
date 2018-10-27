@@ -1,7 +1,7 @@
 Summary: Google Drive KIO-slave for KDE applications
 Name: kio-gdrive
-Version: 1.2.4
-Release: 2
+Version: 1.2.5
+Release: 1
 License: GPLv2+
 Group: Graphical desktop/KDE
 Url: http://www.kde.org
