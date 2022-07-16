@@ -40,6 +40,6 @@ Google Drive KIO-slave for KDE applications.
 %{_datadir}/remoteview/gdrive-network.desktop
 %{_datadir}/metainfo/org*.xml
 %{_libdir}/qt5/plugins/kaccounts/daemonplugins/gdrive.so
-%{_libdir}/qt5/plugins/kf5/kfileitemaction/copyurlitemaction.so
+#{_libdir}/qt5/plugins/kf5/kfileitemaction/copyurlitemaction.so
 %{_datadir}/accounts/services/kde/google-drive.service
 %{_datadir}/knotifications5/gdrive.notifyrc
