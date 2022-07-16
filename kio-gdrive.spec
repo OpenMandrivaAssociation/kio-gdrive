@@ -1,11 +1,11 @@
 Summary: Google Drive KIO-slave for KDE applications
 Name: kio-gdrive
-Version: 1.3.0
-Release: 4
+Version: 22.04.3
+Release: 1
 License: GPLv2+
 Group: Graphical desktop/KDE
 Url: http://www.kde.org
-Source0: http://download.kde.org/stable/kio-gdrive/%{version}/src/%{name}-%{version}.tar.xz
+Source0: https://download.kde.org/stable/release-service/%{version}/src/kio-gdrive-%{version}.tar.xz
 BuildRequires: cmake(ECM)
 BuildRequires: cmake(Qt5Core)
 BuildRequires: cmake(Qt5Test)
@@ -40,6 +40,7 @@ Google Drive KIO-slave for KDE applications.
 %{_datadir}/remoteview/gdrive-network.desktop
 %{_datadir}/metainfo/org*.xml
 %{_libdir}/qt5/plugins/kaccounts/daemonplugins/gdrive.so
-%{_libdir}/qt5/plugins/kf5/kfileitemaction/copyurlitemaction.so
+%{_libdir}/qt5/plugins/kf5/kfileitemaction/gdrivecontextmenuaction.so
+%{_libdir}/qt5/plugins/kf5/propertiesdialog/gdrivepropertiesplugin.so
 %{_datadir}/accounts/services/kde/google-drive.service
 %{_datadir}/knotifications5/gdrive.notifyrc
