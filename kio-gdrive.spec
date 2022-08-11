@@ -1,11 +1,12 @@
 Summary: Google Drive KIO-slave for KDE applications
 Name: kio-gdrive
-Version: 22.04.3
+Version: 22.07.90
 Release: 1
 License: GPLv2+
 Group: Graphical desktop/KDE
 Url: http://www.kde.org
-Source0: https://download.kde.org/stable/release-service/%{version}/src/kio-gdrive-%{version}.tar.xz
+%define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
+Source0: https://download.kde.org/%{stable}/release-service/%{version}/src/kio-gdrive-%{version}.tar.xz
 BuildRequires: cmake(ECM)
 BuildRequires: cmake(Qt5Core)
 BuildRequires: cmake(Qt5Test)
@@ -16,6 +17,7 @@ BuildRequires: cmake(KPimGAPI)
 BuildRequires: cmake(KAccounts)
 BuildRequires: cmake(KF5DocTools)
 BuildRequires: cmake(KF5Notifications)
+BuildRequires: cmake(KF5Purpose)
 BuildRequires: pkgconfig(libaccounts-glib)
 BuildRequires: intltool
 
@@ -42,5 +44,7 @@ Google Drive KIO-slave for KDE applications.
 %{_libdir}/qt5/plugins/kaccounts/daemonplugins/gdrive.so
 %{_libdir}/qt5/plugins/kf5/kfileitemaction/gdrivecontextmenuaction.so
 %{_libdir}/qt5/plugins/kf5/propertiesdialog/gdrivepropertiesplugin.so
+%{_libdir}/qt5/plugins/kf5/purpose/purpose_gdrive.so
 %{_datadir}/accounts/services/kde/google-drive.service
 %{_datadir}/knotifications5/gdrive.notifyrc
+%{_datadir}/purpose/purpose_gdrive_config.qml
