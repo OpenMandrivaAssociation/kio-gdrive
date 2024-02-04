@@ -1,6 +1,6 @@
 Summary: Google Drive KIO-slave for KDE applications
 Name: plasma6-kio-gdrive
-Version: 24.01.90
+Version: 24.01.95
 Release: 1
 License: GPLv2+
 Group: Graphical desktop/KDE
@@ -14,7 +14,7 @@ BuildRequires: cmake(Qt6Keychain)
 BuildRequires: cmake(KF6I18n)
 BuildRequires: cmake(KF6KIO)
 BuildRequires: cmake(KPim6GAPI)
-BuildRequires: cmake(KAccounts)
+BuildRequires: cmake(KAccounts6)
 BuildRequires: cmake(KF6DocTools)
 BuildRequires: cmake(KF6Notifications)
 BuildRequires: cmake(KF6Purpose)
@@ -48,3 +48,6 @@ Google Drive KIO-slave for KDE applications.
 %{_qtdir}/plugins/kf6/kio/gdrive.so
 %{_qtdir}/plugins/kf6/purpose/purpose_gdrive.so
 %{_datadir}/purpose/purpose_gdrive_config.qml
+%{_qtdir}/plugins/kaccounts/daemonplugins/gdrive.so
+%{_datadir}/accounts/services/kde/google-drive.service
+%{_datadir}/knotifications6/gdrive.notifyrc
