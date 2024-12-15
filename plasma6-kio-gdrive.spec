@@ -3,8 +3,8 @@
 %define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
 Summary: Google Drive KIO-slave for KDE applications
 Name: plasma6-kio-gdrive
-Version: 24.08.3
-Release: %{?git:0.%{git}.}2
+Version: 24.12.0
+Release: %{?git:0.%{git}.}1
 License: GPLv2+
 Group: Graphical desktop/KDE
 Url: https://www.kde.org
@@ -44,10 +44,9 @@ Google Drive KIO-slave for KDE applications.
 %install
 %ninja_install -C build
 
-%find_lang kio5_gdrive
+%find_lang kio6_gdrive --with-html --all-name
 
-%files -f kio5_gdrive.lang
-%doc %{_docdir}/HTML/*/kioslave5/gdrive/index.*
+%files -f kio6_gdrive.lang
 %{_datadir}/remoteview/gdrive-network.desktop
 %{_datadir}/metainfo/org*.xml
 %{_qtdir}/plugins/kf6/kfileitemaction/gdrivecontextmenuaction.so
