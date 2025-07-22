@@ -3,7 +3,7 @@
 %define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
 Summary: Google Drive KIO-slave for KDE applications
 Name: kio-gdrive
-Version: 25.04.0
+Version: 25.04.3
 Release: %{?git:0.%{git}.}1
 License: GPLv2+
 Group: Graphical desktop/KDE
@@ -28,25 +28,15 @@ BuildRequires: cmake(KF6Purpose)
 BuildRequires: pkgconfig(libaccounts-glib)
 BuildRequires: intltool
 
+%rename plasma6-kio-gdrive
+
+BuildSystem:	cmake
+BuildOption:	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON
+
 %description
 Google Drive KIO-slave for KDE applications.
 
-%prep
-%autosetup -p1 -n kio-gdrive-%{?git:%{gitbranchd}}%{!?git:%{version}}
-%cmake \
-	-DQT_MAJOR_VERSION=6 \
-	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
-	-G Ninja
-
-%build
-%ninja -C build
-
-%install
-%ninja_install -C build
-
-%find_lang kio6_gdrive --with-html --all-name
-
-%files -f kio6_gdrive.lang
+%files -f %{name}.lang
 %{_datadir}/remoteview/gdrive-network.desktop
 %{_datadir}/metainfo/org*.xml
 %{_qtdir}/plugins/kf6/kfileitemaction/gdrivecontextmenuaction.so
